@@ -1,0 +1,16 @@
+public class App {
+
+    public static void main(String[] args) throws Exception {
+  
+        Name name = new Name();
+        String namaLengkap = name.getName();
+        System.out.println(namaLengkap);
+        
+    }
+}
+class Name {
+    private String name = "Sirait" ; 
+    String getName() {
+          return "Joenathan" + name;
+        }
+    }
