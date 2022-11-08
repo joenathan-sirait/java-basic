@@ -1,6 +1,8 @@
+package JavaBasic;
+
 public class sort {
     public static void main(String[] args) {
-        int[] array = {3,2,4,1,5};
+        int[] array = {100,7,11,9,8};
         int temp;
         
         for (int i = 0; i < array.length; i++) {
