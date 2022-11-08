@@ -1,0 +1,3 @@
+1. konsep oop adalah konsep yang mengandung banyak object dan juga banyak inheritence agar program lebih kompleks
+2. atribut pada object sering disebut juga sebagai data
+3. objet adalah sebuah data kalau class sendiri adalah fungsi yang menggambarkan sebuah object
