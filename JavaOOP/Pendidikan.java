@@ -33,7 +33,7 @@ public class Pendidikan {
 
   public void getLastPendidkan() {
     System.out.println("===== PENDIDIKAN TERAKHIR =====");
-    System.out.println("Pendidikan Terakhir: " + getLastEducation());
+    System.out.println("Pendidikan Terakhir: " + getLastEducation() + "\n");
     
   }
 }

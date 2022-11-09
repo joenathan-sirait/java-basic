@@ -11,7 +11,7 @@ public class Main {
         String educationChoice;
         boolean isNext = true ;
         while (isNext) {
-            System.out.println("Pilih nomor");
+            System.out.println("+++++ BIODATA APP +++++ \n");
             System.out.println("1. input Person");
             System.out.println("2. input Pendidikan");
             System.out.println("3. Show Person");
@@ -25,7 +25,6 @@ public class Main {
 
             switch (userChoice) {
                 case "1":
-               
                 System.out.println("Input Person\n");
                 System.out.print("Input Nama Depan: ");
                 main.firstName =  main.userInput.nextLine();
@@ -35,7 +34,7 @@ public class Main {
                 main.domisili =  main.userInput.nextLine();
                 System.out.print("Input tahun lahir: ");
                 main.tahunLahir =  main.userInput.nextLine();
-                if (main.tahunLahir.matches("[a-zA-Z]+") ){
+                if (main.tahunLahir.matches("[a-zA-Z]+") || main.tahunLahir.matches("[^\\s\\w]*") ){
                     System.out.println("Mohon masukan tahun dengan benar");
                     isNext = false;
                     System.out.println("data gagal tersimpan");
@@ -93,6 +92,10 @@ public class Main {
                 case "4":
                 System.out.println("Show Pendidikan\n");
                 Pendidikan pendidikan = new Pendidikan(main.lastEducation);
+                if (main.lastEducation == null ) {
+                    System.out.println("DATA BELUM DI ISI");
+                    break;
+                }
                 pendidikan.getLastPendidkan();
                 break;
                 case "5":
@@ -103,7 +106,7 @@ public class Main {
                     break;
             }
 
-            System.out.print("Apakah anda ingin melanjutkan (y/n)? ");
+            System.out.print("Apakah anda ingin melanjutkan aplikasi (y/n)? ");
             userChoice = main.userInput.nextLine();
             isNext = userChoice.equalsIgnoreCase("y");
 

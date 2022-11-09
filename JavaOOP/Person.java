@@ -9,9 +9,6 @@ public class Person {
   private String lastName;
   private String domisili;
   private String tahunLahir;
-  private int usia;
-
-
   // constructor kosong
   public Person() {
 
@@ -23,8 +20,6 @@ public class Person {
     this.lastName = lastName;
     this.domisili = domisili;
     this.tahunLahir = tahunLahir;
-    this.usia = usia;
-    // firstName, lastName, domisili, tahunLahir. Menampilkan nama lengkap, domisili dan usia
   }
 
   // method class Person
@@ -46,9 +41,10 @@ public class Person {
   public String getTahunLahir() {
     return this.tahunLahir;
   }
+  
 
   public int getUsia() {
-    return this.usia = 2022 - Integer.parseInt(this.tahunLahir);
+    return 2022 - Integer.parseInt(this.tahunLahir);
   }
 
   public String getDomisili() {
