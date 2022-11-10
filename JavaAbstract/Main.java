@@ -26,7 +26,7 @@ public class Main {
            userChoice = main.userInput.nextLine();
            switch (userChoice) {
             case "1":
-            System.out.println("Rumus Segitiga\n");          
+               System.out.println("Rumus Segitiga\n");          
                 System.out.println("Input Rumus Luas Segitiga\n");
                 System.out.println("Menghitung Luas\n");
                 System.out.print("Masukan Alas Segitiga: ");

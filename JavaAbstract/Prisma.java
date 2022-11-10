@@ -32,7 +32,7 @@ public class Prisma extends Segitiga implements BangunRuangServe{
     }
   
     public void Luas(){
-      System.out.println("Luas Permukaan adalah : " + super.getLuas());
+      System.out.println("Luas Permukaan adalah : " + 2 * super.getLuas() + (super.getKeliling() * this.tinggiPrisma));
     }
 
     public int getVolume() {

@@ -5,7 +5,7 @@ import JavaAbstract.serve.BangunRuangServe;
 public class Kubus extends Persegi implements BangunRuangServe {
     @Override
     public void Luas(){
-      System.out.println("Luas Permukaan adalah : " + super.getLuas());
+      System.out.println("Luas Permukaan adalah : " + 6 * super.getLuas());
     }
 
     public int getVolume() {
