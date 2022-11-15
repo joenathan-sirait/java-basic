@@ -7,7 +7,7 @@ import sistemAcademic.serve.RegisServe;
 
 public class Main {
     Scanner userInput = new Scanner(System.in);
-    String fullName  , courseName , room;
+    String fullName  , courseName , room, domisili;
     int sks,cardIdentitas, totalSks;
     
     public static void main(String[] args) {
@@ -30,7 +30,8 @@ public class Main {
              
              System.out.print("Masukan Nama Lengkap: ");
              main.fullName =  main.userInput.nextLine();
-            //  
+             System.out.print("Masukan Domisili: ");
+             main.domisili =  main.userInput.nextLine();
              System.out.print("Masukan Course Name: ");
              main.courseName = main.userInput.nextLine();
              System.out.print("Masukan Room : ");
@@ -39,10 +40,9 @@ public class Main {
               main.cardIdentitas =  main.userInput.nextInt();
              System.out.print("Masukan SKS :");
              main.sks = main.userInput.nextInt();
-             rs = new Student(main.fullName, main.cardIdentitas,main.courseName, main.room, main.sks,main.totalSks);
+             rs = new Student(main.domisili, main.fullName, main.cardIdentitas,main.courseName, main.room, main.sks,main.totalSks);
              students.add(rs);
              rs.regisStudents("", 0, "", "", 0,0);
-            
              break;
                 case "2":
                 System.out.println("Cari Students");

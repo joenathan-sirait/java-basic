@@ -9,6 +9,7 @@ public class Student extends Person implements  RegisServe  {
     private String courseName;
     private String room;
     private int sks;
+    private int totalSks;
 
     public Student(String domisili) {
         super(domisili);
@@ -18,7 +19,8 @@ public class Student extends Person implements  RegisServe  {
 
     }
     
-    public Student(String fullName, int cardIdentitas) {
+    public Student(String fullName, int cardIdentitas, String domisili ) {
+        super(domisili);
         this.fullName = fullName;
         this.cardIdentitas = cardIdentitas;
         
@@ -85,14 +87,15 @@ public class Student extends Person implements  RegisServe  {
     }
 
     public int getTotalSks(){
-        return this.sks =+ this.sks;
+        return this.totalSks = this.sks + getSks();
     }
 
+
     @Override
-    public void regisStudent(String fullName, int cardIdentitas) {
+    public void regisStudent(String fullName, int cardIdentitas, String domisili) {
         // TODO Auto-generated method stub
             System.out.println("++++Data Siswa++++");
-            if (this.sks > 144) {
+            if (getTotalSks() > 144) {
                 System.out.println("Nama : " + getFullName() + "\tSPD");
             } else {
                 System.out.println("Nama : " + getFullName());
@@ -110,8 +113,13 @@ public class Student extends Person implements  RegisServe  {
     }
 
     public String result(){
-        return "Nama Lengkap : "+getFullName()  + " " + "Total SKS" + getTotalSks()
+        if (getTotalSks() > 144) {
+        return "Nama Lengkap : "+getFullName()+" SPD"+ " Domisili : " + super.getDomisili()  + "Total SKS : " + getTotalSks() ;
+            
+        } else {
+        return "Nama Lengkap : "+getFullName() + " Domisili : " + super.getDomisili()  + "Total SKS : " + getTotalSks()
                 +"Card Identitas : "+ getCardIdentitas() + "\n"  ;
+        }
     }
 
     public String resultLearningPlan(){

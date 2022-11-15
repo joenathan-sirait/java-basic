@@ -7,14 +7,15 @@ import sistemAkademik.serve.RegisServe;
 
 public class Main {
     Scanner userInput = new Scanner(System.in);
-    String fullName  , courseName , room;
+    String fullName  , courseName , room, domisili;
     int sks,cardIdentitas;
     
     public static void main(String[] args) {
         String userChoice;
         Main main = new Main();
       
-        RegisServe rs;
+        Student student = new Student();
+
         List<RegisServe> learnings = new ArrayList<>(); 
         List<RegisServe> students = new ArrayList<>(); 
         boolean isNext = true ;
@@ -30,11 +31,13 @@ public class Main {
              System.out.println("\nBiodata Student\n");
              System.out.print("Masukan Nama Lengkap: ");
              main.fullName =  main.userInput.nextLine();
+             System.out.print("Masukan Domisli : ");
+             main.domisili =  main.userInput.nextLine();
              System.out.print("Masukan Card Identitas: ");
              main.cardIdentitas =  main.userInput.nextInt();
-             rs = new Student(main.fullName, main.cardIdentitas);
-             students.add(rs);
-             rs.regisStudent("", 0);
+            student = new Student(main.fullName, main.cardIdentitas,main.domisili);
+             students.add(student);
+            student.regisStudent("",0, "");
             
              break;
                 case "2":
@@ -45,15 +48,21 @@ public class Main {
              main.room =  main.userInput.nextLine();
              System.out.print("Masukan SKS :");
              main.sks = main.userInput.nextInt();
-             rs = new Student(main.courseName, main.room, main.sks);
-             learnings.add(rs);
-             rs.learningPlan("", "", 0);
+             student.setCourseName(main.courseName);
+             student.setRoom(main.room);
+             student.setSks(main.sks);
+             students.set(0 , student);
+            
+           
+             
         
                 break;
                 case "3":
                 System.out.println("Cari Students");
                 System.out.println(students.toString());
-                System.out.println(learnings.toString());
+               
+
+
                 
 
                 break;

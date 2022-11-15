@@ -21,5 +21,9 @@ public class Person {
         this.domisili = domisili;
     }
     
+    public void domisili(){
+        System.out.println("Domisili : " + getDomisili());
+    }
+    
     
 }

@@ -17,13 +17,15 @@ public class Student extends Person implements  RegisServe  {
 
    
     
-    public Student(String fullName, int cardIdentitas, String courseName, String room, int sks, int totalSks) {
+    public Student(String domisili, String fullName, int cardIdentitas, String courseName, String room, int sks, int totalSks) {
+        super(domisili);
         this.fullName = fullName;
         this.cardIdentitas = cardIdentitas;
         this.courseName = courseName;
         this.room = room;
         this.sks = sks;
         this.totalSks = totalSks;
+        
         
     }
 
@@ -117,13 +119,23 @@ public class Student extends Person implements  RegisServe  {
 
     public String result(){
         if (getTotalSks() > 144) {
-        return "Nama Lengkap : "+getFullName()+" SPD"  + " " + "Total SKS : " + getTotalSks();
+        return "Nama Lengkap : "+getFullName()+" SPD"+ " Domisili : " + super.getDomisili()  + "Total SKS : " + getTotalSks() ;
             
         } else {
-        return "Nama Lengkap : "+getFullName()  + " " + "Total SKS : " + getTotalSks()
+        return "Nama Lengkap : "+getFullName() + " Domisili : " + super.getDomisili()  + "Total SKS : " + getTotalSks()
                 +"Card Identitas : "+ getCardIdentitas() + "\n"  ;
         }
     }
+
+    
+
+    @Override
+    public void domisili() {
+        // TODO Auto-generated method stub
+        super.domisili();
+    }
+
+
 
     public String resultLearningPlan(){
         return "Course Name : " +getCourseName() + " Room : " + getRoom() + " SKS : " + getSks() ;
