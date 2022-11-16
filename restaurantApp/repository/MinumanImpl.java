@@ -41,6 +41,14 @@ public class MinumanImpl implements restaurantService<Minuman, Integer> {
       minumans.remove((int) id);
     }
 
+    public  void showMinuman(){
+        
+      for (int i = 0; i < this.findAll().size(); i++) {
+          System.out.println(Integer.toString(i+1)+ ". " + this.findById(i));
+      }
+      
+  }
+
    
     
 

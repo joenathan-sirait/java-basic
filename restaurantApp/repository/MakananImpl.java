@@ -25,6 +25,13 @@ public class MakananImpl implements restaurantService<Makanan, Integer> {
     //   }
     //   return sum;
     // }
+    public  void showMakanan(){
+        
+      for (int i = 0; i < this.findAll().size(); i++) {
+          System.out.println(Integer.toString(i+1)+ ". " + this.findById(i));
+      }
+      
+  }
   
     @Override
     public Makanan findById(Integer id) {

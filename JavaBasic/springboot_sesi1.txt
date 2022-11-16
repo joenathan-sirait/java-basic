@@ -1,0 +1,7 @@
+1. Spring boot adalah sebuah framework java yang sebenarnya adalah framwork yang memperbagus spring framework
+   special spring boot adalah lifecycle yang sudah terbuat yang memungkinkan para developer membuat penulisan kode yahng mirip
+2. Method request 1. Get ( untuk membaca data pada resource )
+		  2. Put ( create resource)
+		  3. DELETE ( Hapus Resource )
+		  4. PATCH ( Belum Tahu )
+		  5. POST ( memperbaharui atau menambah resource )

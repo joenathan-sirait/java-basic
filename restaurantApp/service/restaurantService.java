@@ -13,4 +13,7 @@ import java.util.List;
       
         void delete(K id);
 
+        // public void namaMethod(){
+        // }
+
       }

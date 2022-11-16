@@ -41,6 +41,14 @@ public class PaketImpl implements restaurantService<Paket, Integer> {
       pakets.remove((int) id);
     }
 
+    public  void showPaket(){
+        
+      for (int i = 0; i < this.findAll().size(); i++) {
+          System.out.println(Integer.toString(i+1)+ ". " + this.findById(i));
+      }
+      
+  }
+
    
     
 

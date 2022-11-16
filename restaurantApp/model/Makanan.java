@@ -1,6 +1,6 @@
 package restaurantApp.model;
 
-import restaurantApp.repository.MakananImpl;
+
 
 public class Makanan {
     private String makananMenu ;
@@ -46,19 +46,6 @@ public class Makanan {
     public void setTotalPesanan(int totalPesanan) {
         this.totalPesanan = totalPesanan;
     }
-    // public int getAllHarga() {
-    //     return this.allHarga = getTotalHarga() + getTotalHarga();
-    // }
-
-
-    // public int getAllHarga() {
-    //     int sum = 0;
-    //     for (int i = 0; i < makananImpl.size(); i++) {
-    //       sum += (int) makananImpl.get(i);
-    //     }
-    //     return sum;
-    //   }
-   
 
     @Override
     public String toString() {
